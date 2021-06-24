@@ -1,0 +1,111 @@
+.stats {
+    margin-bottom: $spacing;
+
+    .wrap {
+        padding: $spacing;
+        margin: 0 $spacing;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border: 1px solid $color-border;
+        border-radius: 8px;
+        text-align: center;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 14px;
+                line-height: 17px;
+                color: #7A7A7A;
+                // border-bottom: 1px solid rgba(0,0,0,.15);
+                margin-bottom: $spacing;
+
+                span {
+                    font-size: 32px;
+                    line-height: 40px;
+                    font-weight: 700;
+                    color: $color-black;
+                    margin-bottom: 9px;
+                }
+                
+                &:not(:last-child):after {
+                    content: "";
+                    height: 1px;
+                    width: 100%;
+                    display: block;
+                    background: rgba(0,0,0,.15);
+                    margin-top: $spacing;
+                    width: 80px;
+                }
+            }
+        }
+
+        progress[value] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 12px;
+
+            &::-webkit-progress-bar {
+                border-radius: 12px;
+                background: #a7a4a4;
+            }
+
+            &::-webkit-progress-value {
+                border-radius: 12px;
+                background: #3CB3AB;
+                border-radius: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .stats {
+        .wrap {
+            max-width: 730px;
+            margin: 0 auto;
+            padding: $spacing*2;
+
+            ul {
+                flex-direction: row;
+                //justify-content: space-between;
+                margin-bottom: 10px;
+
+                li {
+                    align-items: flex-start;                    
+                    font-size: 15px;
+                    line-height: 18px;
+                    margin-bottom: $spacing;
+                    width: 33%;
+
+                    &:not(:first-child) {
+                        border-left: 1px solid rgba(0,0,0,.15);
+                        padding-left: $spacing*2;
+                    }
+    
+                    span {
+                        font-size: 32px;
+                        line-height: 40px;
+                        font-weight: 700;
+                        color: $color-black;
+                        margin-bottom: 9px;
+                    }
+                    
+                    &:not(:last-child):after {
+                        display: none;
+                    }
+                }
+            }
+    
+        }
+    }
+}

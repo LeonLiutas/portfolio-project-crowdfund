@@ -1,0 +1,30 @@
+@import '_variables';
+
+html, body {
+    margin: 0;
+    padding: 0 0 52px 0;
+    font-family: $font-family;
+    color: $color-text-primary;
+    font-size: $font-size-mobile;
+    line-height: 24px;
+    background-color: #fafafa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+    html, body {
+        font-size: $font-size;
+        line-height: 30px;
+    }
+}
+
+@import 'components/_header';
+@import 'components/_hero';
+@import 'components/_buttons';
+@import 'components/_stats';
+@import 'components/_content';
+@import 'components/_content-card-option';
+@import 'components/_modal';

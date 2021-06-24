@@ -1,0 +1,78 @@
+.btn {
+    color: #FFFFFF;
+    background: #3CB3AB;
+    font-weight: 700;
+    font-size: $font-size-mobile;
+    padding: 18px 42px;
+
+    border: none;
+    outline: 0;
+    border-radius: 33.5px;
+    letter-spacing: 0;
+    text-align: center;
+    transition: background .3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #147A73;
+    }
+
+    &.disabled {
+        background: #cbcbcb;
+        cursor: default;
+    }
+}
+
+.bookmark-btn {
+    border: none;
+    outline: 0;
+    background-color: transparent;
+    padding: 0;
+
+    span {
+        display: none;
+    }
+
+    &:before {
+        content: "";
+        background: url(../../assets/images/icon-bookmark.svg) no-repeat;
+        height: 56px;
+        width: 56px;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .btn {
+        font-size: $font-size;
+    }
+
+    .bookmark-btn {
+        border-radius: 33.5px;
+        background-color: #f4f4f4;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        outline: 0;
+
+        span {
+            color: #7A7A7A;
+            font-weight: 700;
+            font-size: $font-size;
+            padding: 0;
+            padding-right: 24px;
+            display: inline-block;
+        }
+    
+        &:before {
+            content: "";
+            background: url(../../assets/images/icon-bookmark.svg) no-repeat;
+            height: 56px;
+            width: 56px;
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+    
+}

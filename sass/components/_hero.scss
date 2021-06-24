@@ -1,0 +1,80 @@
+.hero {
+    margin-bottom: $spacing;
+    
+    &:before {
+        background: url(../images/image-hero-mobile.jpg) no-repeat;
+        //background-size: auto 300px;
+        content: "";
+        height: 300px;
+        width: 100%;
+        display: block;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .wrap {
+        padding: $spacing;
+        margin: -56px $spacing 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border: 1px solid $color-border;
+        border-radius: 8px;
+        text-align: center;
+
+        .logo {
+            max-height: 56px;
+            margin-top: -$spacing+-28px;
+            margin-bottom: $spacing;
+
+            img {
+                max-height: 56px;
+                width: auto;
+            }
+        }
+
+        h1 {
+            color: $color-black;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+
+        &:before {
+            background: url(../images/image-hero-desktop.jpg) no-repeat;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+    
+        .wrap {
+            max-width: 730px;
+            margin: -92px auto 0;
+            padding: $spacing*2;
+
+            .logo {
+                margin-top: -$spacing*2+-28px;
+            }
+
+            h1 {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+        }
+    
+    }
+}
